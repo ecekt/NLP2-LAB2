@@ -9,7 +9,6 @@ use strict;
 my $filename = $ARGV[0];
 open(my $fh, '<:encoding(UTF-8)', $filename)
   or die "Could not open file '$filename' $!";
- 
 
 
 my $filename2 = $ARGV[1];
@@ -19,6 +18,6 @@ while (my $row = <$fh>) {
   print $fhl lc($row);
   print $fhl "\n";
 }
-close $fhl;
 
+close $fhl;
 close $fh;
